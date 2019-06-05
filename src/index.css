@@ -40,3 +40,8 @@ button {
 button:active {
 	box-shadow: none;
 }
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

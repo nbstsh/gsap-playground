@@ -1,12 +1,24 @@
 import React from 'react';
 import './App.css';
-import Sample1 from './components/TweenMaxSample';
+import TweenMaxSample from './components/TweenMaxSample';
+import TimelineMaxSample from './components/TimelineMaxSample';
+
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
 	return (
-		<div className='App'>
-			<Sample1 />
-		</div>
+		<Router>
+			<header>
+				<nav>
+					<Link to='/TweenMaxSample'>TweenMaxSample</Link>
+					<Link to='/TimelineMax'>TweenMaxSample</Link>
+				</nav>
+			</header>
+			<div className='App'>
+				<Route path='/TweenMaxSample' component={TweenMaxSample} />
+				<Route path='/TimelineMax' component={TimelineMaxSample} />
+			</div>
+		</Router>
 	);
 }
 
